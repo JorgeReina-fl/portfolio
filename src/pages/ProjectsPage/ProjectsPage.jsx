@@ -9,7 +9,7 @@ function ProjectsPage() {
       <SEO
         title="Proyectos - Jorge Reina | Portfolio de Desarrollo Web"
         description="Explora los proyectos de desarrollo web de Jorge Reina. Aplicaciones full-stack con React, Node.js, MongoDB y más tecnologías modernas."
-        url="https://jorgereina.dev/projects"
+        url="https://jorgereina.es/projects"
       />
       <h1>Mis Proyectos</h1>
       <p>Aquí hay una selección de algunos de mis trabajos. Si quieres ver más, no dudes en contactarme.</p>

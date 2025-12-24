@@ -43,7 +43,7 @@ function AboutPage() {
       <SEO
         title="Sobre Mí - Jorge Reina | Desarrollador Full-Stack"
         description="Conoce más sobre Jorge Reina, desarrollador full-stack apasionado por crear aplicaciones web modernas con React y Node.js. Experiencia en JavaScript, MongoDB y más."
-        url="https://jorgereina.dev/about"
+        url="https://jorgereina.es/about"
       />
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

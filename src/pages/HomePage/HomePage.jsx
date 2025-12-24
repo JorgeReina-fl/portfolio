@@ -6,8 +6,8 @@ function HomePage() {
     <PageTransition>
       <SEO
         title="Jorge Reina - Desarrollador Full-Stack | Portfolio"
-        description="Conoce más sobre Jorge Reina, desarrollador full-stack apasionado por crear aplicaciones web modernas con React y Node.js. Experiencia en JavaScript, MongoDB y más."
-        url="https://jorgereina.es/about"
+        description="Portfolio profesional de Jorge Reina. Desarrollador full-stack especializado en React, Node.js, MongoDB y aplicaciones web modernas. Explora mis proyectos y habilidades."
+        url="https://jorgereina.es"
       />
       <Hero />
       <TechShowcase />
