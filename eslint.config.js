@@ -6,9 +6,10 @@ import reactCompiler from 'eslint-plugin-react-compiler'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'playwright.config.js', 'tests/**/*']),
   {
     files: ['**/*.{js,jsx}'],
+    ignores: ['vite.config.js', 'playwright.config.js', 'tests/**/*'],
     extends: [
       js.configs.recommended,
       reactHooks.configs['recommended-latest'],
@@ -27,8 +28,22 @@ export default defineConfig([
       'react-compiler': reactCompiler,
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]|^motion$', argsIgnorePattern: '^_' }],
       'react-compiler/react-compiler': 'error',
+    },
+  },
+  {
+    files: ['src/router/**/*.jsx'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
+  {
+    files: ['vite.config.js'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
     },
   },
 ])
