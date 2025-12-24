@@ -43,7 +43,7 @@ function ContactPage() {
       <SEO
         title="Contacto - Jorge Reina | Desarrollador Full-Stack"
         description="¿Tienes un proyecto en mente? Contacta con Jorge Reina para colaborar en tu próxima aplicación web. Disponible para proyectos freelance y oportunidades laborales."
-        url="https://jorgereina.dev/contact"
+        url="https://jorgereina.es/contact"
       />
       <h1>Contacto</h1>
       <p>¿Tienes alguna pregunta o quieres trabajar juntos? Envíame un mensaje.</p>

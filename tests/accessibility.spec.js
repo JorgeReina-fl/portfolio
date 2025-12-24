@@ -13,8 +13,10 @@ test.describe('Accessibility Tests', () => {
         test(`${page.name} page should not have accessibility violations`, async ({ page: playwrightPage }) => {
             await playwrightPage.goto(page.url);
 
-            // Wait for page to be fully loaded
+            // Wait for page to be fully loaded and animations to finish
             await playwrightPage.waitForLoadState('networkidle');
+            // Give Framer Motion time to finish initial animations
+            await playwrightPage.waitForTimeout(1000);
 
             // Run axe accessibility scan
             const accessibilityScanResults = await new AxeBuilder({ page: playwrightPage })
@@ -27,6 +29,9 @@ test.describe('Accessibility Tests', () => {
 
         test(`${page.name} page should have proper heading structure`, async ({ page: playwrightPage }) => {
             await playwrightPage.goto(page.url);
+            await playwrightPage.waitForLoadState('networkidle');
+            // Wait for h1 to be visible/attached (Framer Motion might delay it)
+            await playwrightPage.waitForSelector('h1', { state: 'attached', timeout: 5000 });
 
             // Check for h1
             const h1Count = await playwrightPage.locator('h1').count();
