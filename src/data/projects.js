@@ -35,4 +35,13 @@ export const projectsData = [
     imageUrl: "/proyectos-img/ecommerce-mockup.png",
     featured: true,
   },
+  {
+    title: "Portfolio Profesional",
+    description: "Mi portfolio personal actual (este sitio), diseñado con una estética premium y minimalista. Implementa animaciones avanzadas con Framer Motion, optimización SEO profunda y un sistema de diseño basado en componentes reutilizables.",
+    tech: ["React", "Framer Motion", "Vite", "ESLint", "Playwright", "SEO"],
+    repoUrl: "https://github.com/JorgeReina-fl/portfolio",
+    liveUrl: "https://jorgereina.es",
+    imageUrl: "/proyectos-img/Portfolio-image.png",
+    featured: true,
+  },
 ];
