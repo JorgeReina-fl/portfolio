@@ -1,0 +1,31 @@
+.projectsSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-08) var(--spacing-06);
+}
+
+.projectsSection h1 {
+    text-align: center;
+    margin-bottom: var(--spacing-06);
+    font-size: 3rem;
+}
+
+.projectsSection>p {
+    text-align: center;
+    color: var(--text-secondary-color);
+    margin-bottom: var(--spacing-08);
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .projectsSection {
+        padding: var(--spacing-07) var(--spacing-05);
+    }
+
+    .projectsSection h1 {
+        font-size: 2.5rem;
+    }
+}

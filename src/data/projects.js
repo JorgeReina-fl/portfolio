@@ -1,0 +1,38 @@
+export const projectsData = [
+  {
+    title: "Proyecto Alpha",
+    description: "Una aplicación de chat full-stack construida para demostrar una arquitectura web moderna y escalable. Ofrece comunicación en tiempo real con Socket.IO, autenticación de usuarios segura con JWT, notificaciones instantáneas e indicadores de escritura.",
+    tech: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "JWT", "Vite"],
+    repoUrl: "https://github.com/JorgeReina-fl/proyecto-alpha",
+    liveUrl: "https://proyecto-alpha-backend.onrender.com/",
+    imageUrl: "/proyectos-img/proyecto-alpha.png",
+    featured: true,
+  },
+  {
+    title: "Freelance Priority Viz",
+    description: "Un dashboard interactivo que permite a los usuarios explorar datos complejos. Construido con D3.js para gráficos dinámicos y React para la interfaz, esta herramienta demuestra mi habilidad para manejar y presentar grandes volúmenes de información de manera intuitiva.",
+    tech: ["React", "D3.js", "Sass", "REST APIs"],
+    repoUrl: "https://github.com/JorgeReina-fl/freelance-priority-viz",
+    liveUrl: "https://freelance-priority-viz.onrender.com/",
+    imageUrl: "/proyectos-img/Freelance-Priority-Viz.png",
+    featured: true,
+  },
+  {
+    title: "Portfolio Personal v1",
+    description: "La primera versión de mi portfolio, construida con HTML, CSS y JavaScript puro para demostrar los fundamentos del desarrollo web.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    repoUrl: "#",
+    liveUrl: "#",
+    imageUrl: "/proyectos-img/Portfolio-image.png",
+    featured: false,
+  },
+  {
+    title: "E-commerce de Ropa",
+    description: "Una plataforma de comercio electrónico completa construida con el stack MERN. Incluye gestión de productos, carrito de compras, pasarela de pago segura con Stripe y un panel de administración avanzado.",
+    tech: ["MongoDB", "Express", "React", "Node.js", "Stripe", "Docker", "Cypress"],
+    repoUrl: "https://github.com/JorgeReina-fl/e-commerce",
+    liveUrl: "https://e-commerce-pi-bay-86.vercel.app/",
+    imageUrl: "/proyectos-img/ecommerce-mockup.png",
+    featured: true,
+  },
+];

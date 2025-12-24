@@ -1,0 +1,273 @@
+/* Importar fuente moderna Inter de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Importar utilidades de layout */
+@import './layout.css';
+
+/* :root se usa para declarar variables CSS globales */
+:root {
+  /* Paleta de Colores Premium - Gradientes Morados */
+  --primary-color: #8b5cf6;
+  /* Morado vibrante principal */
+  --primary-light: #a78bfa;
+  /* Morado claro - WCAG AA compliant */
+  --primary-dark: #7c3aed;
+  /* Morado oscuro */
+  --accent-color: #c084fc;
+  /* Acento morado suave */
+  --accent-bright: #e879f9;
+  /* Acento brillante */
+
+  --secondary-color: #6366f1;
+  /* Índigo complementario */
+  --background-color: #0f0f1e;
+  /* Azul oscuro profundo */
+  --background-secondary: #1a1a2e;
+  /* Superficie secundaria */
+  --surface-color: rgba(139, 92, 246, 0.05);
+  /* Superficie con tinte morado */
+  --surface-glass: rgba(255, 255, 255, 0.05);
+  /* Glassmorphism */
+
+  --text-color: #f8fafc;
+  /* Texto principal muy claro */
+  --text-secondary-color: #cbd5e1;
+  /* Texto secundario */
+  --text-muted: #a0aec0;
+  /* Texto apagado - mejor contraste */
+
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --gradient-accent: linear-gradient(135deg, #c084fc 0%, #e879f9 100%);
+  --gradient-hero: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 50%, #1a1a2e 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+
+  /* Tipografía */
+  --font-family-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-size-h1: 3rem;
+  /* 48px - más grande */
+  --font-size-h2: 2rem;
+  /* 32px */
+  --font-size-h3: 1.5rem;
+  /* 24px */
+  --font-size-small: 0.875rem;
+  /* 14px */
+
+  /* Espaciado (Basado en 8px) */
+  --spacing-01: 0.125rem;
+  /* 2px */
+  --spacing-02: 0.25rem;
+  /* 4px */
+  --spacing-03: 0.5rem;
+  /* 8px */
+  --spacing-04: 0.75rem;
+  /* 12px */
+  --spacing-05: 1rem;
+  /* 16px */
+  --spacing-06: 1.5rem;
+  /* 24px */
+  --spacing-07: 2rem;
+  /* 32px */
+  --spacing-08: 3rem;
+  /* 48px */
+  --spacing-09: 4rem;
+  /* 64px */
+
+  /* Bordes - Suaves y modernos */
+  --border-radius-sm: 0.5rem;
+  /* 8px */
+  --border-radius: 1rem;
+  /* 16px */
+  --border-radius-lg: 1.5rem;
+  /* 24px */
+  --border-radius-full: 9999px;
+  /* Completamente redondeado */
+
+  /* Sombras con Glow */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+  --shadow-glow-sm: 0 0 10px rgba(139, 92, 246, 0.3);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+
+  /* Transiciones */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 400ms ease-in-out;
+
+  /* Focus */
+  --focus-outline: 2px solid var(--primary-color);
+}
+
+/* Animaciones Globales */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: var(--shadow-glow-sm);
+  }
+
+  50% {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Reset mejorado */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-main);
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Tipografía mejorada */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-05);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: 600;
+}
+
+
+/* Enlaces mejorados */
+a {
+  color: var(--primary-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-bright);
+  text-decoration: none;
+}
+
+/* Enfoque accesible mejorado */
+*:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Selección de texto */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
