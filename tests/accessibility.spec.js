@@ -59,8 +59,8 @@ test.describe('Accessibility Tests', () => {
     test('All interactive elements should be keyboard accessible', async ({ page }) => {
         await page.goto('/');
 
-        // Test navigation links
-        const navLinks = page.locator('nav a');
+        // Test navigation links - only those that are visible (mobile vs desktop)
+        const navLinks = page.locator('nav a').filter({ visible: true });
         const count = await navLinks.count();
 
         for (let i = 0; i < count; i++) {
