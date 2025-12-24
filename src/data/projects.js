@@ -18,15 +18,6 @@ export const projectsData = [
     featured: true,
   },
   {
-    title: "Portfolio Personal v1",
-    description: "La primera versión de mi portfolio, construida con HTML, CSS y JavaScript puro para demostrar los fundamentos del desarrollo web.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    repoUrl: "#",
-    liveUrl: "#",
-    imageUrl: "/proyectos-img/Portfolio-image.png",
-    featured: false,
-  },
-  {
     title: "E-commerce de Ropa",
     description: "Una plataforma de comercio electrónico completa construida con el stack MERN. Incluye gestión de productos, carrito de compras, pasarela de pago segura con Stripe y un panel de administración avanzado.",
     tech: ["MongoDB", "Express", "React", "Node.js", "Stripe", "Docker", "Cypress"],
