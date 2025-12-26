@@ -47,6 +47,11 @@
   cursor: grabbing;
 }
 
+.scroller:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
 .scrollerInner {
   display: flex;
   gap: var(--spacing-06);

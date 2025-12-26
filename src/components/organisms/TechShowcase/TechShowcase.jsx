@@ -73,6 +73,9 @@ function TechShowcase() {
       <div
         className={styles.scroller}
         ref={scrollerRef}
+        tabIndex={0}
+        role="region"
+        aria-label="Tecnologías y habilidades - desplazable"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleDragEnd}
@@ -80,6 +83,13 @@ function TechShowcase() {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleDragEnd}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowLeft') {
+            scrollerRef.current.scrollLeft -= 100;
+          } else if (e.key === 'ArrowRight') {
+            scrollerRef.current.scrollLeft += 100;
+          }
+        }}
       >
         <div className={`${styles.scrollerInner} ${isDragging ? styles.dragging : ''}`}>
           {extendedTechnologies.map((tech, index) => (
