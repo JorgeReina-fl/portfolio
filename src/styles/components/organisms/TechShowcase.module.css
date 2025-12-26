@@ -29,13 +29,33 @@
   mask: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
   padding: var(--spacing-06) 0;
   margin-bottom: var(--spacing-05);
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+}
 
+.scroller::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+.scroller:active {
+  cursor: grabbing;
 }
 
 .scrollerInner {
   display: flex;
   gap: var(--spacing-06);
-  animation: scroll 50s linear infinite;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+.scrollerInner.dragging {
+  animation-play-state: paused;
 }
 
 .techCard {

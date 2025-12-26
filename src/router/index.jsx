@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, ScrollRestoration } from "react-router-dom";
 import RootLayout from "@layouts/RootLayout";
 
 // Lazy loading de páginas para code splitting

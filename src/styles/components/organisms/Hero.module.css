@@ -274,8 +274,12 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 75vh;
-    padding: var(--spacing-07) var(--spacing-04);
+    min-height: 85vh;
+    padding: var(--spacing-07) var(--spacing-04) 0;
+  }
+
+  .heroGrid {
+    gap: var(--spacing-07);
   }
 
   .logoContainer {

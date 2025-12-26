@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 import styles from '@styles/components/organisms/TechShowcase.module.css';
 
 const technologies = [
@@ -16,10 +17,46 @@ const technologies = [
   { name: 'GraphQL', color: '#E10098' }
 ];
 
-// Duplicamos para el bucle infinito
-const extendedTechnologies = [...technologies, ...technologies];
+// Cuadruplicamos para el bucle infinito más convincente
+const extendedTechnologies = [...technologies, ...technologies, ...technologies, ...technologies];
 
 function TechShowcase() {
+  const scrollerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollerRef.current.offsetLeft);
+    setScrollLeft(scrollerRef.current.scrollLeft);
+  };
+
+  const handleTouchStart = (e) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - scrollerRef.current.offsetLeft);
+    setScrollLeft(scrollerRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Multiplicador para sensibilidad
+    scrollerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    const x = e.touches[0].pageX - scrollerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <section
       className={styles.techShowcase}
@@ -33,8 +70,18 @@ function TechShowcase() {
       >
         Tecnologías y Habilidades
       </motion.h2>
-      <div className={styles.scroller}>
-        <div className={styles.scrollerInner}>
+      <div
+        className={styles.scroller}
+        ref={scrollerRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={handleDragEnd}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleDragEnd}
+      >
+        <div className={`${styles.scrollerInner} ${isDragging ? styles.dragging : ''}`}>
           {extendedTechnologies.map((tech, index) => (
             <div
               key={index}
