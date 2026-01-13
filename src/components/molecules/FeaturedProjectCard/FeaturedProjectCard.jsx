@@ -19,7 +19,20 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <img src={imageUrl} alt={`Captura de pantalla del proyecto ${title}`} className={styles.image} loading="lazy" />
+        <picture>
+          <source
+            srcSet={imageUrl.replace('.png', '.webp')}
+            type="image/webp"
+          />
+          <img
+            src={imageUrl}
+            alt={`Captura de pantalla del proyecto ${title}`}
+            className={styles.image}
+            width="1200"
+            height="675"
+            loading="lazy"
+          />
+        </picture>
       </motion.div>
       <motion.div
         className={styles.content}

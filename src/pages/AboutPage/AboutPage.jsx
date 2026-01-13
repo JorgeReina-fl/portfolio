@@ -28,12 +28,11 @@ const itemVariants = {
 };
 
 const imageVariants = {
-  hidden: { opacity: 0, scale: 0.8, rotate: -5 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
-    scale: 1,
-    rotate: 0,
-    transition: { duration: 0.8, ease: "easeOut" }
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
   }
 };
 
@@ -59,7 +58,10 @@ function AboutPage() {
         animate="visible"
       >
         <motion.div className={styles.profileImage} variants={imageVariants}>
-          <img src="/developer.png" alt="Jorge Reina" className={styles.image} />
+          <picture>
+            <source srcSet="/developer.webp" type="image/webp" />
+            <img src="/developer-optimized.png" alt="Jorge Reina" className={styles.image} width="800" height="800" loading="lazy" />
+          </picture>
         </motion.div>
         <motion.div className={styles.bio} variants={itemVariants}>
           <motion.h2 variants={itemVariants}>

@@ -25,10 +25,8 @@ const itemVariants = {
 function Hero() {
   return (
     <section className={styles.hero}>
-      {/* Partículas decorativas de fondo */}
-      <div className={styles.particle} style={{ top: '20%', left: '10%' }}></div>
-      <div className={styles.particle} style={{ top: '60%', left: '80%' }}></div>
-      <div className={styles.particle} style={{ top: '40%', right: '15%' }}></div>
+      {/* Partícula decorativa de fondo - simplificada */}
+      <div className={styles.particle} style={{ top: '30%', left: '15%' }}></div>
 
       <motion.div
         className={styles.heroGrid}
@@ -36,30 +34,27 @@ function Hero() {
         initial="hidden"
         animate="visible"
       >
-        {/* Logo animado central */}
+        {/* Logo optimizado central */}
         <motion.div
           className={styles.logoContainer}
           variants={itemVariants}
         >
           <div className={styles.logoGlow}></div>
-          <motion.img
-            src="/logo-morado-jr.png"
-            alt="Jorge Reina Logo"
-            className={styles.logo}
-            initial={{ scale: 0.8, rotate: -10 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          />
-          {/* Partículas orbitando el logo */}
-          <div className={styles.orbit}>
-            <div className={styles.orbitParticle}></div>
-          </div>
-          <div className={`${styles.orbit} ${styles.orbit2}`}>
-            <div className={styles.orbitParticle}></div>
-          </div>
-          <div className={`${styles.orbit} ${styles.orbit3}`}>
-            <div className={styles.orbitParticle}></div>
-          </div>
+          <picture>
+            <source srcSet="/logo-morado-jr.webp" type="image/webp" />
+            <motion.img
+              src="/logo-morado-jr-optimized.png"
+              alt="Jorge Reina Logo"
+              className={styles.logo}
+              width="400"
+              height="400"
+              fetchpriority="high"
+              loading="eager"
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          </picture>
         </motion.div>
 
         <motion.h1

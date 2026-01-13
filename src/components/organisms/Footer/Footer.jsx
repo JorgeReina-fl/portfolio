@@ -10,7 +10,10 @@ function Footer() {
         {/* Columna 1: Info y Logo */}
         <div className={styles.column}>
           <Link to="/" className={styles.logoLink}>
-            <img src="/logo-morado-jr.png" alt="Jorge Reina" className={styles.logo} />
+            <picture>
+              <source srcSet="/logo-morado-jr.webp" type="image/webp" />
+              <img src="/logo-morado-jr-optimized.png" alt="Jorge Reina" className={styles.logo} width="80" height="80" />
+            </picture>
           </Link>
           <p className={styles.description}>
             Desarrollador Full-Stack apasionado por crear experiencias web modernas, accesibles y de alto rendimiento.

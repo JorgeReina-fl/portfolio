@@ -69,7 +69,13 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
           'router': ['react-router-dom'],
+          'animations': ['framer-motion'],
+          'confetti': ['canvas-confetti'],
         },
+        // Optimizar nombres de chunks
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     // Optimizar chunks

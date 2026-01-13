@@ -6,7 +6,10 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <NavLink to="/" className={styles.logoLink}>
-          <img src="/logo-morado-jr.png" alt="JR" className={styles.logoImage} />
+          <picture>
+            <source srcSet="/logo-morado-jr.webp" type="image/webp" />
+            <img src="/logo-morado-jr-optimized.png" alt="JR" className={styles.logoImage} width="60" height="60" />
+          </picture>
         </NavLink>
         <nav>
           <ul className={styles.navList}>

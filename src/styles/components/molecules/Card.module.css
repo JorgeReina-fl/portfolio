@@ -68,6 +68,8 @@
 .imageContainer {
   width: 100%;
   height: 200px;
+  aspect-ratio: 16 / 9;
+  /* Previene CLS */
   position: relative;
   overflow: hidden;
   background: #fefefe;
