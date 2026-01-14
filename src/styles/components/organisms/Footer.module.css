@@ -4,6 +4,9 @@
   margin-top: auto;
   padding: var(--spacing-08) 0 var(--spacing-06);
   color: var(--text-secondary-color);
+  /* Prevent CLS by reserving minimum space for footer content */
+  min-height: 300px;
+  contain: layout;
 }
 
 .container {
@@ -60,10 +63,13 @@
 }
 
 .logo {
-  height: 40px;
-  width: auto;
+  /* Match HTML width/height attributes to prevent CLS */
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
   filter: grayscale(100%) brightness(200%);
-  transition: all var(--transition-base);
+  transition: filter var(--transition-base), opacity var(--transition-base), transform var(--transition-base);
   opacity: 0.7;
   display: block;
 }
