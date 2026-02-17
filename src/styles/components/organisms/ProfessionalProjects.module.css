@@ -1,0 +1,28 @@
+.section {
+    padding: var(--spacing-09) 0 var(--spacing-05);
+}
+
+.title {
+    text-align: center;
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-08);
+    background: var(--gradient-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-07);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

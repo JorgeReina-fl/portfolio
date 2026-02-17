@@ -1,0 +1,46 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "JR" [ref=e6] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e7]:
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - link "Inicio" [ref=e10] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e11]:
+          - link "Sobre Mí" [ref=e12] [cursor=pointer]:
+            - /url: /about
+        - listitem [ref=e13]:
+          - link "Proyectos" [ref=e14] [cursor=pointer]:
+            - /url: /projects
+        - listitem [ref=e15]:
+          - link "Contacto" [ref=e16] [cursor=pointer]:
+            - /url: /contact
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - heading "Sobre Mí" [level=1] [ref=e19]
+      - generic [ref=e20]:
+        - generic [ref=e22]: "[Foto de Perfil]"
+        - generic [ref=e23]:
+          - heading "Apasionado por la tecnología y la creación de soluciones." [level=2] [ref=e24]
+          - paragraph [ref=e25]: ¡Hola! Soy Jorge Reina, un desarrollador de software con un profundo interés en construir aplicaciones web que no solo funcionen a la perfección, sino que también ofrezcan una experiencia de usuario intuitiva y agradable. Mi viaje en el mundo de la programación comenzó con la curiosidad de cómo las ideas se transforman en productos digitales tangibles.
+          - paragraph [ref=e26]: Me especializo en el ecosistema de JavaScript, trabajando cómodamente tanto en el frontend con librerías como React, como en el backend desarrollando APIs robustas con Node.js. Disfruto enfrentándome a retos complejos y estoy en un proceso de aprendizaje y mejora continua.
+          - list [ref=e27]:
+            - listitem [ref=e28]: React
+            - listitem [ref=e29]: JavaScript (ES6+)
+            - listitem [ref=e30]: Node.js
+            - listitem [ref=e31]: Express
+            - listitem [ref=e32]: MongoDB
+            - listitem [ref=e33]: HTML5
+            - listitem [ref=e34]: CSS3
+            - listitem [ref=e35]: Sass
+            - listitem [ref=e36]: Vite
+            - listitem [ref=e37]: Git
+            - listitem [ref=e38]: REST APIs
+            - listitem [ref=e39]: GraphQL
+  - contentinfo [ref=e40]:
+    - paragraph [ref=e41]: © 2025 Jorge Reina. Todos los derechos reservados.
+```

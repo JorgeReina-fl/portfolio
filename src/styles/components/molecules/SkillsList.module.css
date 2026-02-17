@@ -1,0 +1,17 @@
+.skillsList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-04);
+  padding: 0;
+  margin-top: var(--spacing-06);
+}
+
+.skillItem {
+  background-color: var(--surface-color);
+  color: var(--primary-light);
+  /* WCAG AA compliant - 5.2:1 contrast */
+  padding: var(--spacing-03) var(--spacing-05);
+  border: 1px solid var(--primary-light);
+  font-weight: 500;
+}

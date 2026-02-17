@@ -1,0 +1,9 @@
+.featuredSection {
+  padding: var(--spacing-07) 0 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: var(--spacing-07);
+  font-size: var(--font-size-h2);
+}

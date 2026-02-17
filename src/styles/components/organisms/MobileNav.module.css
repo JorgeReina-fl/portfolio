@@ -1,0 +1,367 @@
+.mobileNav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-top: 1px solid var(--glass-border);
+    padding: var(--spacing-03) var(--spacing-05);
+    z-index: 1000;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .mobileNav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: var(--spacing-02);
+    }
+}
+
+.navLink,
+.activeLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-01);
+    padding: var(--spacing-02);
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    flex: 1;
+    max-width: 74px;
+}
+
+.activeLink {
+    color: var(--primary-light);
+}
+
+.navLink:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Botón de rugby central */
+.rugbyButton {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-glow);
+    transition: all var(--transition-base);
+    margin-top: -30px;
+    border: 3px solid var(--background-color);
+}
+
+.rugbyButton:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow), 0 8px 16px rgba(139, 92, 246, 0.4);
+}
+
+.rugbyButton:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.rugbyButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Balón de rugby */
+.rugbyBall {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    transition: all var(--transition-base);
+}
+
+.ballSvg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Overlay translúcido con efecto spotlight */
+.spotlightOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 15, 30, 0.85);
+    z-index: 998;
+    animation: fadeInOverlay 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.spotlightCone {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 280px;
+    clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 40% 100%);
+    background: linear-gradient(to top,
+            rgba(185, 95, 253, 0.8) 0%,
+            rgba(185, 95, 253, 0.1) 70%,
+            transparent 100%);
+    filter: blur(8px);
+    pointer-events: none;
+    animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.8;
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateX(-50%) scaleX(1.1);
+    }
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Postes de rugby en el centro de la pantalla */
+.goalPostCenter {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 200px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.goalPostCenter.showGoal {
+    opacity: 1;
+}
+
+.postCenterSvg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 4px 8px rgba(139, 92, 246, 0.5));
+}
+
+/* Mensaje de resultado */
+.resultMessage {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 800;
+    z-index: 1001;
+    animation: showResult 2s ease-out;
+    pointer-events: none;
+}
+
+.goalMessage {
+    color: var(--accent-bright);
+    text-shadow: 0 0 20px var(--accent-bright), 0 0 40px var(--accent-bright);
+}
+
+.missMessage {
+    color: var(--text-secondary-color);
+    font-size: 2rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes showResult {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+/* Animaciones de patada - Centro (GOL) - Llega al centro de la pantalla */
+@keyframes kickBallCenter {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translateY(-50vh) translateX(0) rotate(-180deg) scale(0.5);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(-360deg) scale(1);
+    }
+}
+
+/* Animaciones de patada - Izquierda (FALLO) */
+@keyframes kickBallLeft {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translateY(-45vh) translateX(-150px) rotate(-180deg) scale(0.5);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(-360deg) scale(1);
+    }
+}
+
+/* Animaciones de patada - Derecha (FALLO) */
+@keyframes kickBallRight {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translateY(-45vh) translateX(150px) rotate(-180deg) scale(0.5);
+    }
+
+    100% {
+        transform: translateY(0) translateX(0) rotate(-360deg) scale(1);
+    }
+}
+
+/* Aplicar animaciones según dirección */
+.kicking.center .rugbyBall {
+    animation: kickBallCenter 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.kicking.left .rugbyBall {
+    animation: kickBallLeft 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.kicking.right .rugbyBall {
+    animation: kickBallRight 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes pulseButton {
+
+    0%,
+    100% {
+        box-shadow: var(--shadow-glow);
+    }
+
+    50% {
+        box-shadow: var(--shadow-glow), 0 0 30px rgba(139, 92, 246, 0.6);
+    }
+}
+
+.kicking {
+    animation: pulseButton 1.5s ease-in-out;
+}
+
+/* Efecto de partículas al patear */
+.rugbyButton::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, var(--accent-bright) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.kicking::after {
+    animation: kickParticles 1.5s ease-out;
+}
+
+@keyframes kickParticles {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive ajustes */
+@media (max-width: 480px) {
+    .rugbyButton {
+        width: 64px;
+        height: 64px;
+        margin-top: -25px;
+    }
+
+    .rugbyBall {
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .label {
+        font-size: 11px;
+    }
+
+    .resultMessage {
+        font-size: 2.5rem;
+    }
+
+    .missMessage {
+        font-size: 1.5rem;
+    }
+
+    .spotlightCone {
+        width: 400px;
+        height: 400px;
+    }
+}

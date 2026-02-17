@@ -1,0 +1,38 @@
+export const projectsData = [
+  {
+    title: "Solución E-commerce Headless",
+    description: "Arquitectura de comercio electrónico de nivel empresarial construida con el stack MERN. Cuenta con una integración personalizada de la API de Stripe con webhooks, soporte multilingüe (i18n) y una lógica de carrito persistente robusta. Demuestra capacidad en el manejo de gestión de estado complejo y transacciones financieras seguras.",
+    tech: ["MongoDB", "Express", "React", "Node.js", "Stripe API", "Docker", "Cypress", "i18n"],
+    repoUrl: "https://github.com/JorgeReina-fl/e-commerce",
+    liveUrl: "https://e-commerce-pi-bay-86.vercel.app/",
+    imageUrl: "/proyectos-img/ecommerce-mockup.png",
+    featured: true,
+  },
+  {
+    title: "Motor de Comunicación en Tiempo Real",
+    description: "Aplicación de chat de alta concurrencia diseñada para escalar. Implementa comunicación bidireccional de baja latencia (<100ms) usando Socket.IO, interfaz de usuario optimista y autenticación segura sin estado (JWT). Diseñada para manejar miles de conexiones concurrentes.",
+    tech: ["React", "Node.js", "Socket.IO", "SQL/Supabase", "JWT", "Redis", "Vite"],
+    repoUrl: "https://github.com/JorgeReina-fl/proyecto-alpha",
+    liveUrl: "https://proyecto-alpha-backend.onrender.com/",
+    imageUrl: "/proyectos-img/proyecto-alpha.png",
+    featured: true,
+  },
+  {
+    title: "Dashboard de Visualización de Datos",
+    description: "Panel de análisis interactivo que transforma conjuntos de datos complejos en información procesable. Utiliza D3.js para la renderización de gráficos dinámicos de alto rendimiento y React para la arquitectura basada en componentes. Optimizado para manejar grandes conjuntos de datos en el cliente sin bloquear el hilo principal.",
+    tech: ["React", "D3.js", "Sass", "REST APIs", "Optimización de Rendimiento"],
+    repoUrl: "https://github.com/JorgeReina-fl/freelance-priority-viz",
+    liveUrl: "https://freelance-priority-viz.onrender.com/",
+    imageUrl: "/proyectos-img/Freelance-Priority-Viz.png",
+    featured: true,
+  },
+  {
+    title: "Portfolio Profesional",
+    description: "Este portfolio en sí mismo sirve como demostración de arquitectura frontend moderna. Construido con Vite para un TTI óptimo, muestra animaciones avanzadas (Framer Motion), diseño basado en componentes y optimización SEO estricta. Logrando puntuaciones de 100/100 en Lighthouse.",
+    tech: ["React", "Framer Motion", "Vite", "ESLint", "Playwright", "SEO", "CI/CD"],
+    repoUrl: "https://github.com/JorgeReina-fl/portfolio",
+    liveUrl: "https://jorgereina.es",
+    imageUrl: "/proyectos-img/Portfolio-image.png",
+    featured: true,
+  },
+];
