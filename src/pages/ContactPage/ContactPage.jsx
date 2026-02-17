@@ -4,7 +4,7 @@ import { SEO } from '@atoms';
 import styles from './ContactPage.module.css';
 
 // Formspree endpoint - emails will be sent to jorge.ecru@gmail.com
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvejewy';
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
 
 function ContactPage() {
   const [status, setStatus] = useState('idle'); // idle, submitting, success, error
