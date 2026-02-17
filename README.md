@@ -31,8 +31,8 @@
 
 | Frontend | Animaciones | Estilos | Build |
 |----------|-------------|---------|-------|
-| React 19 | Framer Motion | CSS Modules | Vite |
-| React Router | Motion | CSS Variables | ESLint |
+| React 19 | Framer Motion | CSS Modules | Vite 7 |
+| React Router 7 | Motion | CSS Variables | ESLint |
 
 ---
 
@@ -52,7 +52,7 @@ src/
 
 ---
 
-## 🚀 Instalación
+## 🚀 Instalación y Ejecución
 
 ```bash
 # Clonar el repositorio

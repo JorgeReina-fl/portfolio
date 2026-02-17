@@ -17,6 +17,11 @@ dist-ssr
 .env.test.local
 .env.production.local
 
+# Test results and reports
+lighthouse-reports
+playwright-report
+test-results
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
