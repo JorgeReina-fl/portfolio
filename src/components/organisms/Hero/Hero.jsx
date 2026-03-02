@@ -61,7 +61,7 @@ function Hero() {
           className={styles.headline}
           variants={itemVariants}
         >
-          Desarrollador <br /> Full-Stack <br />
+          Desarrollador <br /> Frontend <br />
           <span style={{ fontSize: '0.6em', display: 'block', marginTop: '10px', color: 'var(--primary)' }}>Especialista en Next.js y TypeScript</span>
         </motion.h1>
         <motion.p
