@@ -4,7 +4,8 @@ import { SEO } from '@atoms';
 import styles from './AboutPage.module.css';
 
 const mySkills = [
-  'React', 'JavaScript (ES6+)', 'Node.js', 'Express', 'MongoDB', 'HTML5', 'CSS3', 'Sass', 'Vite', 'Git', 'REST APIs', 'GraphQL'
+  'React', 'JavaScript (ES6+)', 'Node.js', 'Express', 'MongoDB', 'HTML5', 'CSS3', 'Sass', 'Vite', 'Git', 'REST APIs', 'GraphQL',
+  'Docker & Docker Compose', 'Nginx', 'Linux (Ubuntu)', 'Oracle Cloud', 'SSL/TLS & Let\'s Encrypt', 'Cloudflare DNS',
 ];
 
 const containerVariants = {
@@ -42,7 +43,7 @@ function AboutPage() {
       <SEO
         title="Sobre Mí - Jorge Reina | Desarrollador Full-Stack"
         description="Conoce más sobre Jorge Reina, desarrollador full-stack apasionado por crear aplicaciones web modernas con React y Node.js. Experiencia en JavaScript, MongoDB y más."
-        url="https://jorgereina.es/about"
+        url="https://jorgereina.com/about"
       />
       <motion.h1
         initial={{ opacity: 0, y: -20 }}

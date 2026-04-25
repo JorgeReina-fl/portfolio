@@ -31,8 +31,17 @@ export const projectsData = [
     description: "Mi portfolio personal actual (este sitio), diseñado con una estética premium y minimalista. Implementa animaciones avanzadas con Framer Motion, optimización SEO profunda y un sistema de diseño basado en componentes reutilizables.",
     tech: ["React", "Framer Motion", "Vite", "ESLint", "Playwright", "SEO"],
     repoUrl: "https://github.com/JorgeReina-fl/portfolio",
-    liveUrl: "https://jorgereina.es",
+    liveUrl: "https://jorgereina.com",
     imageUrl: "/proyectos-img/Portfolio-image.png",
+    featured: true,
+  },
+  {
+    title: "Infraestructura Cloud Personal",
+    description: "Diseñé e implementé infraestructura completa en Oracle Cloud Free Tier: servidor de correo profesional (Postfix + Dovecot + OpenDKIM), webmail con Roundcube, servidor web Nginx y base de datos PostgreSQL, todo orquestado con Docker Compose. Incluye certificados SSL/TLS con Let's Encrypt, registros SPF/DKIM/DMARC y relay SMTP a través de Brevo. Email corporativo propio: info@jorgereina.com.",
+    tech: ["Docker", "Docker Compose", "Nginx", "PostgreSQL", "Postfix", "Linux", "SSL/TLS", "Cloudflare", "Oracle Cloud"],
+    repoUrl: "https://github.com/JorgeReina-fl",
+    liveUrl: "https://jorgereina.com",
+    imageUrl: "/proyectos-img/infraestructura-cloud.png",
     featured: true,
   },
 ];

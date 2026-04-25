@@ -43,7 +43,7 @@ function ContactPage() {
       <SEO
         title="Contacto - Jorge Reina | Desarrollador Full-Stack"
         description="¿Tienes un proyecto en mente? Contacta con Jorge Reina para colaborar en tu próxima aplicación web. Disponible para proyectos freelance y oportunidades laborales."
-        url="https://jorgereina.es/contact"
+        url="https://jorgereina.com/contact"
       />
       <h1>Contacto</h1>
       <p>¿Tienes alguna pregunta o quieres trabajar juntos? Envíame un mensaje.</p>
@@ -85,7 +85,7 @@ function ContactPage() {
         <h2>O contáctame directamente</h2>
         <ul className={styles.contactList}>
           <li>
-            <a href="mailto:jorgereina.fl@gmail.com">📧 E-mail</a>
+            <a href="mailto:info@jorgereina.com">📧 E-mail</a>
           </li>
           <li>
             <a href="https://wa.me/34633380269" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>

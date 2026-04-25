@@ -67,7 +67,7 @@ function Hero() {
           className={styles.subheadline}
           variants={itemVariants}
         >
-          Transformo ideas en aplicaciones web escalables y elegantes. Especializado en React, Node.js y arquitecturas modernas, con un enfoque obsesivo en la calidad del código y la experiencia de usuario.
+          Transformo ideas en aplicaciones web escalables y elegantes. Especializado en React, Node.js y arquitecturas modernas. Experiencia end-to-end: desde el frontend hasta el despliegue con Docker, Nginx y Linux en cloud.
         </motion.p>
         <motion.div
           className={styles.ctaContainer}

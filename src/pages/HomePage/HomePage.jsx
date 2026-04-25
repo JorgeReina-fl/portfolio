@@ -7,7 +7,7 @@ function HomePage() {
       <SEO
         title="Jorge Reina - Desarrollador Full-Stack | Portfolio"
         description="Portfolio profesional de Jorge Reina. Desarrollador full-stack especializado en React, Node.js, MongoDB y aplicaciones web modernas. Explora mis proyectos y habilidades."
-        url="https://jorgereina.es"
+        url="https://jorgereina.com"
       />
       <Hero />
       <TechShowcase />

@@ -61,7 +61,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:jorgereina.fl@gmail.com" className={styles.link}>
+              <a href="mailto:info@jorgereina.com" className={styles.link}>
                 E-mail
               </a>
             </li>
