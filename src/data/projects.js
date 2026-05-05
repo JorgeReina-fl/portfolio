@@ -5,7 +5,7 @@ export const projectsData = [
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "NextAuth v5", "Docker", "Gemini AI"],
     repoUrl: "https://github.com/JorgeReina-fl",
     liveUrl: "https://admin.jorgereina.com",
-    imageUrl: "/proyectos-img/admin-panel.png",
+    imageUrl: "/proyectos-img/infraestructura-cloud-v2.png",
     featured: true,
   },
   {
