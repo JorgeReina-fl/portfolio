@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '@atoms';
 import { motion } from 'framer-motion';
 import styles from '@styles/components/molecules/FeaturedProjectCard.module.css';
@@ -5,6 +6,14 @@ import styles from '@styles/components/molecules/FeaturedProjectCard.module.css'
 function FeaturedProjectCard({ project, imagePosition = 'left' }) {
   const { title, description, tech, repoUrl, liveUrl, imageUrl } = project;
   const cardClassName = `${styles.card} ${imagePosition === 'right' ? styles.imageRight : ''}`;
+  const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    if (imgRef.current?.complete && imgRef.current.naturalWidth > 0) {
+      setIsLoaded(true);
+    }
+  }, []);
 
   return (
     <motion.div
@@ -25,12 +34,14 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
             type="image/webp"
           />
           <img
+            ref={imgRef}
             src={imageUrl}
             alt={`Captura de pantalla del proyecto ${title}`}
             className={styles.image}
-            width="1200"
-            height="675"
             loading="lazy"
+            decoding="async"
+            onLoad={() => setIsLoaded(true)}
+            style={{ width: '100%', height: 'auto', opacity: isLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
           />
         </picture>
       </motion.div>
