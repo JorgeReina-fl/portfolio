@@ -177,3 +177,13 @@
     font-size: 1.5rem;
   }
 }
+
+/* ── Admin Panel: muestra imagen completa sin recorte ── */
+.imageContain {
+  background: #1a1a2e;
+}
+
+.imageContain .image {
+  object-fit: contain;
+  padding: var(--spacing-04);
+}
