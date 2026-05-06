@@ -5,7 +5,7 @@ export const projectsData = [
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "NextAuth v5", "Docker", "Gemini AI"],
     repoUrl: "https://github.com/JorgeReina-fl",
     liveUrl: "https://admin.jorgereina.com",
-    imageUrl: "/proyectos-img/infraestructura-cloud-v2.png",
+    imageUrl: "/proyectos-img/Admin-Panel.webp",
     featured: true,
     category: "produccion",
   },
@@ -31,7 +31,7 @@ export const projectsData = [
   },
   {
     title: "Alicatados JR — E-commerce",
-    description: "Tienda online para empresa de alicatados con Lighthouse 100/100 en todas las métricas. Optimización SEO avanzada, lazy loading, imágenes WebP y tests E2E con Cypress.",
+    description: "Sitio web estático para empresa de alicatados en Elche. Next.js 14 con App Router y SSG (24 páginas estáticas), TypeScript, Tailwind CSS, animaciones GSAP + Framer Motion, formulario Formspree, SEO completo (sitemap, robots, JSON-LD).",
     tech: ["Next.js", "TypeScript", "Stripe", "Cypress", "Docker", "Nginx"],
     repoUrl: "https://github.com/JorgeReina-fl",
     liveUrl: "https://alicatadosjr.com",
