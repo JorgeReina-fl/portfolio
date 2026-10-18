@@ -1,11 +1,18 @@
-services:
-  portfolio:
-    build: .
-    ports:
-      - "5173:5173"
-    volumes:
-      - .:/app
-      - /app/node_modules
-    environment:
-      - WATCHPACK_POLLING=true
-    restart: always
+# Servicio Vite dev deshabilitado el 2026-06-28.
+# El portfolio en producción lo sirve el contenedor "portfolio" definido
+# en /home/ubuntu/docker-lab/docker-compose.yml (nginx → portfolio:80).
+# Backup del original: docker-compose.yml.bak2.*
+#
+# services:
+#   portfolio:
+#     build: .
+#     ports:
+#       - "127.0.0.1:5173:5173"
+#     volumes:
+#       - .:/app
+#       - /app/node_modules
+#     environment:
+#       - WATCHPACK_POLLING=true
+#     restart: always
+
+services: {}
