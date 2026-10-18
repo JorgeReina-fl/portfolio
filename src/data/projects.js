@@ -1,5 +1,15 @@
 export const projectsData = [
   {
+    title: "Mivia — AI Website Builder",
+    description: "Generador de páginas web mediante IA (Gemini 2.0 Flash). Crea webs completas para negocios locales y portfolios profesionales. Incluye onboarding web interactivo, activación vía WhatsApp, y despliegue automático con subdominios.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Gemini 2.0 Flash", "Twilio WhatsApp", "Stripe", "Docker"],
+    repoUrl: "https://github.com/JorgeReina-fl",
+    liveUrl: "https://mivia.es",
+    imageUrl: "/proyectos-img/miviav2.webp",
+    featured: true,
+    category: "produccion",
+  },
+  {
     title: "Admin Panel SaaS Multi-tenant",
     description: "Panel de administración SaaS con soporte multi-tenant, integración IA (Gemini 2.5 Flash + Ollama fallback), historial persistente, subida de imágenes, editor RichText y autenticación por dominio de email. Gestiona los tenants EducaBea y Creative Lav Saho desde una sola interfaz.",
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "NextAuth v5", "Docker", "Gemini AI"],
