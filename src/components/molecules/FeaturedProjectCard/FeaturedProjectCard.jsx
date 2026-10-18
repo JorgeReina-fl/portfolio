@@ -15,8 +15,6 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
     }
   }, []);
 
-  const imageContain = title.includes("Admin Panel");
-
   return (
     <motion.div
       className={cardClassName}
@@ -26,7 +24,7 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <motion.div
-        className={`${styles.imageContainer} ${imageContain ? styles.imageContain : ''}`}
+        className={styles.imageContainer}
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
@@ -43,7 +41,7 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
             loading="lazy"
             decoding="async"
             onLoad={() => setIsLoaded(true)}
-            style={{ width: '100%', height: 'auto', opacity: isLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
+            style={{ width: '100%', opacity: isLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
           />
         </picture>
       </motion.div>
