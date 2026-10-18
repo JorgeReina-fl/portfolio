@@ -7,8 +7,8 @@ function ProjectsPage() {
   return (
     <section className={styles.projectsSection}>
       <SEO
-        title="Proyectos - Jorge Reina | Portfolio de Desarrollo Web"
-        description="Explora los proyectos de desarrollo web de Jorge Reina. Aplicaciones full-stack con React, Node.js, MongoDB y más tecnologías modernas."
+        title="Proyectos · Jorge Reina"
+        description="Proyectos de Jorge Reina en producción: aplicaciones Next.js y Node.js con IA, paneles multi-tenant e infraestructura propia con Docker y Cloudflare."
         url="https://jorgereina.com/projects"
       />
       <h1>Mis Proyectos</h1>

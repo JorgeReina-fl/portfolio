@@ -46,17 +46,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/jorgereina.fl/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="https://www.freecodecamp.org/jorge_luis_reina_guaman" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                freeCodeCamp
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/34633380269" target="_blank" rel="noopener noreferrer" className={styles.link}>
+              <a href="https://wa.me/34865782210" target="_blank" rel="noopener noreferrer" className={styles.link}>
                 WhatsApp
               </a>
             </li>

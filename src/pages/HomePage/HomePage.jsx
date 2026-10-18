@@ -5,8 +5,8 @@ function HomePage() {
   return (
     <PageTransition>
       <SEO
-        title="Jorge Reina - Desarrollador Full-Stack | Portfolio"
-        description="Portfolio profesional de Jorge Reina. Desarrollador full-stack especializado en React, Node.js, MongoDB y aplicaciones web modernas. Explora mis proyectos y habilidades."
+        title="Jorge Reina · Full Stack & AI Engineer en Elche"
+        description="Full Stack & AI Engineer en Elche. IA en producción, Next.js, Node.js y PostgreSQL sobre infraestructura propia con Docker. Fundador de mivia.es."
         url="https://jorgereina.com"
       />
       <Hero />

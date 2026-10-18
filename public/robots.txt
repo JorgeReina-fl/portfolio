@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jorgereina.es/sitemap.xml
+Sitemap: https://jorgereina.com/sitemap.xml

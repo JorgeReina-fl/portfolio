@@ -2,10 +2,10 @@ import { Helmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 const SEO = ({
-    title = 'Jorge Reina - Desarrollador Full-Stack',
-    description = 'Portfolio de Jorge Reina, desarrollador full-stack especializado en React, Node.js y aplicaciones web modernas.',
-    image = '/logo-morado-jr.png',
-    url = 'https://jorgereina.dev',
+    title = 'Jorge Reina · Full Stack & AI Engineer en Elche',
+    description = 'Full Stack & AI Engineer en Elche. IA en producción, Next.js, Node.js y PostgreSQL sobre infraestructura propia con Docker. Fundador de mivia.es.',
+    image = 'https://jorgereina.com/og-image.png',
+    url = 'https://jorgereina.com',
     type = 'website'
 }) => {
     return (

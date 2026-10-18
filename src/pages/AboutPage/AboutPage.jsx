@@ -41,8 +41,8 @@ function AboutPage() {
   return (
     <section className={styles.aboutSection}>
       <SEO
-        title="Sobre Mí - Jorge Reina | Desarrollador Full-Stack"
-        description="Conoce más sobre Jorge Reina, desarrollador full-stack apasionado por crear aplicaciones web modernas con React y Node.js. Experiencia en JavaScript, MongoDB y más."
+        title="Sobre mí · Jorge Reina, Full Stack & AI Engineer"
+        description="Desarrollador full stack en Elche y fundador de mivia.es. IA en producción, infraestructura propia y seguridad. Estudia Estadística Empresarial en la UMH."
         url="https://jorgereina.com/about"
       />
       <motion.h1

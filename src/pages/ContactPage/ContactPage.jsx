@@ -3,7 +3,6 @@ import { Button } from '@atoms';
 import { SEO } from '@atoms';
 import styles from './ContactPage.module.css';
 
-// Formspree endpoint - emails will be sent to jorge.ecru@gmail.com
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvejewy';
 
 function ContactPage() {
@@ -41,8 +40,8 @@ function ContactPage() {
   return (
     <section className={styles.contactSection}>
       <SEO
-        title="Contacto - Jorge Reina | Desarrollador Full-Stack"
-        description="¿Tienes un proyecto en mente? Contacta con Jorge Reina para colaborar en tu próxima aplicación web. Disponible para proyectos freelance y oportunidades laborales."
+        title="Contacto · Jorge Reina"
+        description="Contacta con Jorge Reina, Full Stack & AI Engineer en Elche. Disponible para roles remotos o híbridos y proyectos a través de mivia.es."
         url="https://jorgereina.com/contact"
       />
       <h1>Contacto</h1>
@@ -88,16 +87,13 @@ function ContactPage() {
             <a href="mailto:info@jorgereina.com">📧 E-mail</a>
           </li>
           <li>
-            <a href="https://wa.me/34633380269" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+            <a href="https://wa.me/34865782210" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/jorgereinafl/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
           </li>
           <li>
             <a href="https://github.com/JorgeReina-fl" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/jorgereina.fl/" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
           </li>
         </ul>
       </div>
