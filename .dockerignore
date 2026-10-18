@@ -1,7 +1,11 @@
 node_modules
+dist
 .git
 .github
 *.log
 .DS_Store
 .env
-.env.local
+.env.*
+lighthouse-reports
+playwright-report
+test-results
