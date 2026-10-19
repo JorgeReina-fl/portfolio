@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, ScrollRestoration } from "react-router-dom";
 import RootLayout from "@layouts/RootLayout";
+import ErrorPage from "@pages/ErrorPage/ErrorPage";
 
 // Lazy loading de páginas para code splitting
 const HomePage = lazy(() => import("@pages/HomePage/HomePage"));
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
