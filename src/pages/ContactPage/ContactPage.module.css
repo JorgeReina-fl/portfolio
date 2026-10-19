@@ -77,10 +77,12 @@
   text-align: center;
   font-weight: 500;
   animation: slideUp 0.3s ease-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-03);
+}
+
+.successMessage svg,
+.errorMessage svg {
+  vertical-align: -0.2em;
+  margin-right: var(--spacing-02);
 }
 
 .successMessage {
