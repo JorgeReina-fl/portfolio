@@ -34,8 +34,8 @@ function Card({ title, description, repoUrl, liveUrl, imageUrl }) {
         <p className={styles.description}>{description}</p>
         {(liveUrl || repoUrl) && (
           <div className={styles.links}>
-            {liveUrl && <Button to={liveUrl} variant="primary">Ver Demo</Button>}
-            {repoUrl && <Button to={repoUrl} variant="secondary">Ver Código</Button>}
+            {liveUrl && <Button to={liveUrl} variant="primary" target="_blank" rel="noopener noreferrer">Ver Demo</Button>}
+            {repoUrl && <Button to={repoUrl} variant="secondary" target="_blank" rel="noopener noreferrer">Ver Código</Button>}
           </div>
         )}
       </div>
