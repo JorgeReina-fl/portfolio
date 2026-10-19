@@ -16,7 +16,7 @@ function Card({ title, description, repoUrl, liveUrl, imageUrl }) {
         {imageUrl ? (
           <img
             src={imageUrl}
-            alt={title}
+            alt={`Imagen del proyecto ${title}`}
             className={styles.image}
             width="1200"
             height="900"

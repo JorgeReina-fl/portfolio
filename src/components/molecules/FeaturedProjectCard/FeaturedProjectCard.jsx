@@ -31,7 +31,7 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
         <img
           ref={imgRef}
           src={imageUrl}
-          alt={`Captura de pantalla del proyecto ${title}`}
+          alt={`Imagen del proyecto ${title}`}
           className={styles.image}
           width="1200"
           height="900"
