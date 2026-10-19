@@ -337,7 +337,23 @@
     gap: var(--spacing-04);
   }
 
+  .ctaContainer,
+  .cvGroup {
+    width: 100%;
+  }
+
   .cvGroup {
     flex-direction: column;
+  }
+
+  .ctaContainer a {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .cvLabel {
+    justify-content: center;
   }
 }
