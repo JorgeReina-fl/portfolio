@@ -55,10 +55,12 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
         <ul className={styles.techList}>
           {tech.map((t, i) => <li key={i} className={styles.techItem}>{t}</li>)}
         </ul>
-        <div className={styles.links}>
-          {liveUrl && <Button to={liveUrl} variant="primary" target="_blank" rel="noopener noreferrer">Ver Demo</Button>}
-          {repoUrl && <Button to={repoUrl} variant="secondary" target="_blank" rel="noopener noreferrer">Ver Código</Button>}
-        </div>
+        {(liveUrl || repoUrl) && (
+          <div className={styles.links}>
+            {liveUrl && <Button to={liveUrl} variant="primary" target="_blank" rel="noopener noreferrer">Ver Demo</Button>}
+            {repoUrl && <Button to={repoUrl} variant="secondary" target="_blank" rel="noopener noreferrer">Ver Código</Button>}
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );

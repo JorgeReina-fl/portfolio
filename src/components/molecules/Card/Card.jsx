@@ -32,10 +32,12 @@ function Card({ title, description, repoUrl, liveUrl, imageUrl }) {
       <div className={styles.content}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
-        <div className={styles.links}>
-          {liveUrl && <Button to={liveUrl} variant="primary">Ver Demo</Button>}
-          {repoUrl && <Button to={repoUrl} variant="secondary">Ver Código</Button>}
-        </div>
+        {(liveUrl || repoUrl) && (
+          <div className={styles.links}>
+            {liveUrl && <Button to={liveUrl} variant="primary">Ver Demo</Button>}
+            {repoUrl && <Button to={repoUrl} variant="secondary">Ver Código</Button>}
+          </div>
+        )}
       </div>
     </motion.div>
   );
