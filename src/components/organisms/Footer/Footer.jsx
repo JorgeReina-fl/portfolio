@@ -16,7 +16,7 @@ function Footer() {
             </picture>
           </Link>
           <p className={styles.description}>
-            Desarrollador Full-Stack apasionado por crear experiencias web modernas, accesibles y de alto rendimiento.
+            Full Stack & AI Engineer en Elche · Fundador de mivia.es
           </p>
         </div>
 
@@ -60,7 +60,7 @@ function Footer() {
       </div>
 
       <div className={styles.copyright}>
-        <p>© {currentYear} Jorge Reina. Hecho con React y mucho ☕</p>
+        <p>© {currentYear} Jorge Reina. Hecho con React.</p>
       </div>
     </footer>
   );
