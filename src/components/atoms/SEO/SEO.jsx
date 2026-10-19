@@ -6,13 +6,15 @@ const SEO = ({
     description = 'Full Stack & AI Engineer en Elche. IA en producción, Next.js, Node.js y PostgreSQL sobre infraestructura propia con Docker. Fundador de mivia.es.',
     image = 'https://jorgereina.com/og-image.png',
     url = 'https://jorgereina.com',
-    type = 'website'
+    type = 'website',
+    noindex = false
 }) => {
     return (
         <Helmet>
             {/* Meta Tags Básicos */}
             <title>{title}</title>
             <meta name="description" content={description} />
+            {noindex && <meta name="robots" content="noindex, follow" />}
 
             {/* Open Graph (Facebook, LinkedIn) */}
             <meta property="og:type" content={type} />
@@ -39,6 +41,7 @@ SEO.propTypes = {
     image: PropTypes.string,
     url: PropTypes.string,
     type: PropTypes.string,
+    noindex: PropTypes.bool,
 };
 
 export default SEO;
