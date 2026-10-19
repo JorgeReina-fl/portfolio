@@ -3,9 +3,11 @@ import { SkillsList } from '@molecules';
 import { SEO } from '@atoms';
 import styles from './AboutPage.module.css';
 
-const mySkills = [
-  'React', 'JavaScript (ES6+)', 'Node.js', 'Express', 'MongoDB', 'HTML5', 'CSS3', 'Sass', 'Vite', 'Git', 'REST APIs', 'GraphQL',
-  'Docker & Docker Compose', 'Nginx', 'Linux (Ubuntu)', 'Oracle Cloud', 'SSL/TLS & Let\'s Encrypt', 'Cloudflare DNS',
+const skillGroups = [
+  { title: 'Frontend', skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'] },
+  { title: 'Backend', skills: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'MongoDB', 'Redis'] },
+  { title: 'IA', skills: ['Gemini API', 'embeddings con pgvector'] },
+  { title: 'Infraestructura y seguridad', skills: ['Docker', 'Nginx', 'Linux', 'Cloudflare', 'Oracle Cloud', 'GitHub Actions', "Let's Encrypt"] },
 ];
 
 const containerVariants = {
@@ -66,17 +68,23 @@ function AboutPage() {
         </motion.div>
         <motion.div className={styles.bio} variants={itemVariants}>
           <motion.h2 variants={itemVariants}>
-            Apasionado por la tecnología y la creación de soluciones.
+            Desarrollo producto de la base de datos al servidor.
           </motion.h2>
           <motion.p variants={itemVariants}>
-            ¡Hola! Soy Jorge Reina, un desarrollador de software con un profundo interés en construir aplicaciones web que no solo funcionen a la perfección, sino que también ofrezcan una experiencia de usuario intuitiva y agradable. Mi viaje en el mundo de la programación comenzó con la curiosidad de cómo las ideas se transforman en productos digitales tangibles.
+            Soy Jorge Reina, desarrollador full stack en Elche. Fundé mivia.es, un estudio de software con productos propios y proyectos para clientes: gestión de obras con lectura de facturas y presupuestos por voz con Gemini, una plataforma para equipos de rugby y varias webs con su panel de administración.
           </motion.p>
           <motion.p variants={itemVariants}>
-            Me especializo en el ecosistema de JavaScript, trabajando cómodamente tanto en el frontend con librerías como React, como en el backend desarrollando APIs robustas con Node.js. Disfruto enfrentándome a retos complejos y estoy en un proceso de aprendizaje y mejora continua.
+            Administro yo mismo la infraestructura donde corren: 16 servicios en Docker, origen cerrado a Cloudflare, backups cifrados con restauración ensayada y respuesta a incidentes. Ahora mido calidad y coste de los modelos de IA antes de elegir cuál usar en cada tarea.
           </motion.p>
-          <motion.div variants={itemVariants}>
-            <SkillsList skills={mySkills} />
-          </motion.div>
+          <motion.p variants={itemVariants}>
+            Estudio el Grado en Estadística Empresarial en la UMH y entreno al equipo de rugby 7s de la universidad.
+          </motion.p>
+          {skillGroups.map(({ title, skills }) => (
+            <motion.div key={title} variants={itemVariants}>
+              <h3 className={styles.skillGroupTitle}>{title}</h3>
+              <SkillsList skills={skills} />
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
     </section>

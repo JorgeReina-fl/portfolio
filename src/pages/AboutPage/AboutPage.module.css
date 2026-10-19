@@ -59,3 +59,8 @@
 .bio h2 {
     margin-bottom: var(--spacing-06);
 }
+
+.skillGroupTitle {
+    margin-top: var(--spacing-06);
+    font-size: 1.125rem;
+}
