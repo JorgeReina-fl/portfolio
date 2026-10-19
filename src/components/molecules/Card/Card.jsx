@@ -7,9 +7,8 @@ function Card({ title, description, repoUrl, liveUrl, imageUrl }) {
     <motion.div
       className={styles.card}
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       whileHover={{ y: -8, transition: { duration: 0.2 } }}
     >
       <div className={styles.imageContainer}>

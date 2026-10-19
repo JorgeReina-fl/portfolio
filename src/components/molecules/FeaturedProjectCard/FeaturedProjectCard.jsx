@@ -19,9 +19,8 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
     <motion.div
       className={cardClassName}
       initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
     >
       <motion.div
         className={styles.imageContainer}
@@ -44,9 +43,8 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
       <motion.div
         className={styles.content}
         initial={{ opacity: 0, x: imagePosition === 'right' ? 20 : -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.3, delay: 0.1 }}
       >
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.description}>
