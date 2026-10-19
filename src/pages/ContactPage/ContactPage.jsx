@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@atoms';
-import { SEO } from '@atoms';
+import { SEO, Icon } from '@atoms';
 import styles from './ContactPage.module.css';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvejewy';
@@ -69,13 +69,13 @@ function ContactPage() {
 
         {status === 'success' && (
           <div className={styles.successMessage}>
-            ✅ ¡Mensaje enviado correctamente! Te responderé pronto.
+            <Icon name="check" /> ¡Mensaje enviado correctamente! Te responderé pronto.
           </div>
         )}
 
         {status === 'error' && (
           <div className={styles.errorMessage}>
-            ❌ Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctame directamente.
+            <Icon name="x" /> Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctame directamente.
           </div>
         )}
       </form>
@@ -84,16 +84,16 @@ function ContactPage() {
         <h2>O contáctame directamente</h2>
         <ul className={styles.contactList}>
           <li>
-            <a href="mailto:info@jorgereina.com">📧 E-mail</a>
+            <a href="mailto:info@jorgereina.com"><Icon name="mail" /> E-mail</a>
           </li>
           <li>
-            <a href="https://wa.me/34865782210" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+            <a href="https://wa.me/34865782210" target="_blank" rel="noopener noreferrer"><Icon name="whatsapp" /> WhatsApp</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/jorgereinafl/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jorgereinafl/" target="_blank" rel="noopener noreferrer"><Icon name="linkedin" /> LinkedIn</a>
           </li>
           <li>
-            <a href="https://github.com/JorgeReina-fl" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+            <a href="https://github.com/JorgeReina-fl" target="_blank" rel="noopener noreferrer"><Icon name="github" /> GitHub</a>
           </li>
         </ul>
       </div>
