@@ -68,3 +68,10 @@
 .bio p {
     margin-bottom: var(--spacing-04);
 }
+
+.cvLinks {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-02);
+}

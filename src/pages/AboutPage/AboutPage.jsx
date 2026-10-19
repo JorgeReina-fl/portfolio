@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { SkillsList } from '@molecules';
-import { SEO } from '@atoms';
+import { SEO, Icon } from '@atoms';
 import styles from './AboutPage.module.css';
 
 const skillGroups = [
@@ -78,6 +78,12 @@ function AboutPage() {
           </motion.p>
           <motion.p variants={itemVariants}>
             Estudio el Grado en Estadística Empresarial en la UMH y entreno al equipo de rugby 7s de la universidad.
+          </motion.p>
+          <motion.p className={styles.cvLinks} variants={itemVariants}>
+            <Icon name="download" /> Descarga mi CV:{' '}
+            <a href="/cv/jorge-reina-cv-es.pdf" download="Jorge-Reina-CV.pdf" hrefLang="es">Español</a>
+            {' · '}
+            <a href="/cv/jorge-reina-cv-en.pdf" download="Jorge-Reina-Resume.pdf" hrefLang="en">English</a>
           </motion.p>
           {skillGroups.map(({ title, skills }) => (
             <motion.div key={title} variants={itemVariants}>
