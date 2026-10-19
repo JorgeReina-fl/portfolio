@@ -25,6 +25,7 @@ const PageLoader = () => (
   </div>
 );
 
+// Al añadir o quitar rutas, actualizar default.conf (location de rutas del SPA)
 export const router = createBrowserRouter([
   {
     path: "/",
