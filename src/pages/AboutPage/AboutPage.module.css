@@ -64,3 +64,7 @@
     margin-top: var(--spacing-06);
     font-size: 1.125rem;
 }
+
+.bio p {
+    margin-bottom: var(--spacing-04);
+}
