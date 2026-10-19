@@ -28,22 +28,18 @@ function FeaturedProjectCard({ project, imagePosition = 'left' }) {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
       >
-        <picture>
-          <source
-            srcSet={imageUrl.replace('.png', '.webp')}
-            type="image/webp"
-          />
-          <img
-            ref={imgRef}
-            src={imageUrl}
-            alt={`Captura de pantalla del proyecto ${title}`}
-            className={styles.image}
-            loading="lazy"
-            decoding="async"
-            onLoad={() => setIsLoaded(true)}
-            style={{ width: '100%', opacity: isLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
-          />
-        </picture>
+        <img
+          ref={imgRef}
+          src={imageUrl}
+          alt={`Captura de pantalla del proyecto ${title}`}
+          className={styles.image}
+          width="1200"
+          height="900"
+          loading="lazy"
+          decoding="async"
+          onLoad={() => setIsLoaded(true)}
+          style={{ opacity: isLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
+        />
       </motion.div>
       <motion.div
         className={styles.content}

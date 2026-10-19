@@ -14,20 +14,15 @@ function Card({ title, description, repoUrl, liveUrl, imageUrl }) {
     >
       <div className={styles.imageContainer}>
         {imageUrl ? (
-          <picture>
-            <source
-              srcSet={imageUrl.replace('.png', '.webp')}
-              type="image/webp"
-            />
-            <img
-              src={imageUrl}
-              alt={title}
-              className={styles.image}
-              width="1200"
-              height="675"
-              loading="lazy"
-            />
-          </picture>
+          <img
+            src={imageUrl}
+            alt={title}
+            className={styles.image}
+            width="1200"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
         ) : (
           <div className={styles.imagePlaceholder}>
             <span>[Imagen del Proyecto]</span>
