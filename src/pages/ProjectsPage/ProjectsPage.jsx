@@ -3,6 +3,14 @@ import { SEO } from '@atoms';
 import { projectsData } from '@data/projects';
 import styles from './ProjectsPage.module.css';
 
+const blocks = [
+  { title: 'En producción', category: 'produccion' },
+  { title: 'Formación', category: 'academico' },
+].map((block) => ({
+  ...block,
+  projects: projectsData.filter((p) => p.category === block.category),
+}));
+
 function ProjectsPage() {
   return (
     <section className={styles.projectsSection}>
@@ -13,7 +21,14 @@ function ProjectsPage() {
       />
       <h1>Mis Proyectos</h1>
       <p>Aquí hay una selección de algunos de mis trabajos. Si quieres ver más, no dudes en contactarme.</p>
-      <ProjectGrid projects={projectsData} />
+      {blocks.map(({ title, category, projects }) =>
+        projects.length > 0 && (
+          <section key={category} className={styles.block}>
+            <h2>{title}</h2>
+            <ProjectGrid projects={projects} />
+          </section>
+        )
+      )}
     </section>
   );
 }

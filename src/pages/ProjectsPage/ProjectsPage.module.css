@@ -20,6 +20,14 @@
     margin-right: auto;
 }
 
+.block {
+    margin-top: var(--spacing-09);
+}
+
+.block h2 {
+    margin-bottom: var(--spacing-06);
+}
+
 @media (max-width: 768px) {
     .projectsSection {
         padding: var(--spacing-07) var(--spacing-05);
