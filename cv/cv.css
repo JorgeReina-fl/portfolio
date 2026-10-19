@@ -1,0 +1,124 @@
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+  src: url("./fonts/inter-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-style: normal;
+  src: url("./fonts/inter-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-style: normal;
+  src: url("./fonts/space-grotesk-latin-700-normal.woff2") format("woff2");
+}
+
+:root {
+  --ink: #1f1d2b;
+  --accent: #6d28d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 9.5pt;
+  line-height: 1.35;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0;
+  color: var(--accent);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 24pt;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.headline {
+  margin: 2pt 0 0;
+  font-size: 11pt;
+  font-weight: 600;
+}
+
+.contact {
+  margin: 2pt 0 0;
+  font-size: 9pt;
+}
+
+h2 {
+  margin: 10pt 0 4pt;
+  padding-bottom: 2pt;
+  border-bottom: 0.5pt solid var(--accent);
+  color: var(--accent);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 9.5pt;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0 0 3pt;
+}
+
+.job {
+  margin-top: 5pt;
+  margin-bottom: 1pt;
+}
+
+.job:first-of-type {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0 0 3pt;
+  padding-left: 12pt;
+  list-style: disc;
+}
+
+li {
+  margin: 0 0 2pt;
+  padding-left: 1pt;
+}
+
+li::marker {
+  color: var(--ink);
+}
+
+.skills p {
+  margin-bottom: 1.5pt;
+}
