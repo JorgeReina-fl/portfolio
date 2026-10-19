@@ -7,6 +7,7 @@ const HomePage = lazy(() => import("@pages/HomePage/HomePage"));
 const AboutPage = lazy(() => import("@pages/AboutPage/AboutPage"));
 const ProjectsPage = lazy(() => import("@pages/ProjectsPage/ProjectsPage"));
 const ContactPage = lazy(() => import("@pages/ContactPage/ContactPage"));
+const NotFoundPage = lazy(() => import("@pages/NotFoundPage/NotFoundPage"));
 
 // Componente de carga mientras se obtiene la página
 const PageLoader = () => (
@@ -57,6 +58,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<PageLoader />}>
             <ContactPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "*",
+        element: (
+          <Suspense fallback={<PageLoader />}>
+            <NotFoundPage />
           </Suspense>
         ),
       },
