@@ -254,14 +254,6 @@
   gap: var(--spacing-03);
 }
 
-.cvLangLink {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   .heroGrid {
@@ -343,5 +335,9 @@
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-04);
+  }
+
+  .cvGroup {
+    flex-direction: column;
   }
 }

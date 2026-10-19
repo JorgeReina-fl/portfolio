@@ -79,15 +79,9 @@ function Hero() {
             <Button variant="secondary" to="/cv/jorge-reina-cv-es.pdf" download="Jorge-Reina-CV.pdf">
               <span className={styles.cvLabel}><Icon name="download" /> Descargar CV</span>
             </Button>
-            <a
-              className={styles.cvLangLink}
-              href="/cv/jorge-reina-cv-en.pdf"
-              download="Jorge-Reina-Resume.pdf"
-              hrefLang="en"
-              aria-label="Descargar CV en inglés"
-            >
-              EN
-            </a>
+            <Button variant="secondary" to="/cv/jorge-reina-cv-en.pdf" download="Jorge-Reina-Resume.pdf" hrefLang="en">
+              <span className={styles.cvLabel} lang="en"><Icon name="download" /> Download CV</span>
+            </Button>
           </div>
         </motion.div>
       </motion.div>
