@@ -1,4 +1,4 @@
-import { Button } from '@atoms';
+import { Button, Icon } from '@atoms';
 import { motion } from 'framer-motion';
 import styles from '@styles/components/organisms/Hero.module.css';
 
@@ -75,6 +75,20 @@ function Hero() {
         >
           <Button variant="primary" to="/projects">Ver proyectos</Button>
           <Button variant="secondary" to="/contact">Contacto</Button>
+          <div className={styles.cvGroup}>
+            <Button variant="secondary" to="/cv/jorge-reina-cv-es.pdf" download="Jorge-Reina-CV.pdf">
+              <span className={styles.cvLabel}><Icon name="download" /> Descargar CV</span>
+            </Button>
+            <a
+              className={styles.cvLangLink}
+              href="/cv/jorge-reina-cv-en.pdf"
+              download="Jorge-Reina-Resume.pdf"
+              hrefLang="en"
+              aria-label="Descargar CV en inglés"
+            >
+              EN
+            </a>
+          </div>
         </motion.div>
       </motion.div>
     </section>
