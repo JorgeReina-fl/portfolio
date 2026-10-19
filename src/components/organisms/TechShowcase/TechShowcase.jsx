@@ -3,18 +3,19 @@ import { useRef, useState } from 'react';
 import styles from '@styles/components/organisms/TechShowcase.module.css';
 
 const technologies = [
+  { name: 'Next.js', color: '#FFFFFF' },
   { name: 'React', color: '#61DAFB' },
-  { name: 'JavaScript (ES6+)', color: '#F7DF1E' },
-  { name: 'Node.js', color: '#339933' },
-  { name: 'Express', color: '#888888' }, // Gris neutro
+  { name: 'TypeScript', color: '#3178C6' },
+  { name: 'Node.js', color: '#5FA04E' },
+  { name: 'PostgreSQL', color: '#4169E1' },
+  { name: 'Prisma', color: '#5A67D8' },
   { name: 'MongoDB', color: '#47A248' },
-  { name: 'HTML5', color: '#E34F26' },
-  { name: 'CSS3', color: '#1572B6' },
-  { name: 'Sass', color: '#CC6699' },
-  { name: 'Vite', color: '#646CFF' },
-  { name: 'Git', color: '#F05032' },
-  { name: 'REST APIs', color: '#7D8492' }, // Gris neutro
-  { name: 'GraphQL', color: '#E10098' }
+  { name: 'Redis', color: '#FF4438' },
+  { name: 'Docker', color: '#2496ED' },
+  { name: 'Nginx', color: '#009639' },
+  { name: 'Cloudflare', color: '#F38020' },
+  { name: 'GitHub Actions', color: '#2088FF' },
+  { name: 'Gemini API', color: '#8E75B2' }
 ];
 
 // Cuadruplicamos para el bucle infinito más convincente
@@ -68,14 +69,14 @@ function TechShowcase() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        Tecnologías y Habilidades
+        Stack
       </motion.h2>
       <div
         className={styles.scroller}
         ref={scrollerRef}
         tabIndex={0}
         role="region"
-        aria-label="Tecnologías y habilidades - desplazable"
+        aria-label="Stack tecnológico - desplazable"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleDragEnd}
@@ -96,6 +97,7 @@ function TechShowcase() {
             <div
               key={index}
               className={styles.techCard}
+              aria-hidden={index >= technologies.length ? 'true' : undefined}
               style={{ '--tech-color': tech.color }} // Pasamos el color como una variable CSS
             >
               <p className={styles.techName}>{tech.name}</p>
