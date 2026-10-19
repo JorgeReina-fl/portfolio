@@ -61,20 +61,20 @@ function Hero() {
           className={styles.headline}
           variants={itemVariants}
         >
-          Desarrollador <br /> Full-Stack
+          Full Stack &<br />AI Engineer
         </motion.h1>
         <motion.p
           className={styles.subheadline}
           variants={itemVariants}
         >
-          Transformo ideas en aplicaciones web escalables y elegantes. Especializado en React, Node.js y arquitecturas modernas. Experiencia end-to-end: desde el frontend hasta el despliegue con Docker, Nginx y Linux en cloud.
+          Llevo IA a producción y me ocupo también de la infraestructura donde corre: despliegue, seguridad y backups. Fundador de mivia.es, en Elche.
         </motion.p>
         <motion.div
           className={styles.ctaContainer}
           variants={itemVariants}
         >
-          <Button variant="primary" to="/projects">Ver Proyectos</Button>
-          <Button variant="secondary" to="/contact">Contactar</Button>
+          <Button variant="primary" to="/projects">Ver proyectos</Button>
+          <Button variant="secondary" to="/contact">Contacto</Button>
         </motion.div>
       </motion.div>
     </section>
